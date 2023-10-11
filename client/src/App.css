@@ -1,0 +1,304 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+  --card-color-1: #def2ff;
+  --card-color-2: #bfeabe;
+  --card-color-3: #f2d8c6;
+  --card-color-4: #f0efb0;
+}
+
+body {
+  background: #111111;
+  color: aliceblue;
+}
+
+.app{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .dark > *{
+  background-color: #111111;
+  color: aliceblue;
+}
+
+.light > *{
+  background-color: white;
+  color: #181818;
+} */
+
+.container{
+  width: 300px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.container > h1{
+  font-size: 2.5rem;
+}
+
+.container > p{
+  font-size: .8rem;
+  margin-bottom: 20px;
+}
+
+form > div{
+  padding: 7px 16px;
+  background-color: rgba(225, 225, 225, 0.5);
+  margin: 15px 0;
+  border-radius: 7px;
+}
+
+form > div > label {
+  font-size: .7rem;
+  color: #c7c7c7;
+}
+
+.input_wrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.input_wrapper>input{
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  color: aliceblue;
+}
+
+.input_wrapper>input::placeholder{
+  color: #c7c7c7;
+}
+
+form > button{
+  margin-top: 10px;
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.login_page_link, .signup_page_link {
+  margin-top: 15px;
+}
+
+.login_page_link > a, .signup_page_link > a {
+  margin-left: 5px;
+  color: #c7c7c7;
+}
+
+
+
+
+.home{
+  width: 100%;
+  height: 100%;
+  align-self: flex-start;
+}
+
+.home > h1{
+  margin-top: 100px;
+  text-align: center;
+  user-select: none;
+  opacity: .2;
+}
+
+nav{
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: fixed;
+}
+
+.user{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.user>h4{
+  font-size: 1.2rem;
+}
+
+.logout_box{
+  position: absolute;
+  background-color: rgb(73, 73, 73);
+  width: 90px;
+  height:50px;
+  display: grid;
+  place-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  right: 0px;
+  top: 50px;
+  display: none;
+}
+
+.user > .visible{
+  display: grid;
+}
+
+.logout_box>button{
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.add_icon{
+  position: fixed;
+  background-color: rgb(25, 212, 236);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.cards_wrapper{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.card{
+  grid-column: span 3;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+.card> h3{
+  width: 100%;
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.card>p{
+  font-size: .9rem;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card:nth-child(4n + 1){
+  background-color: var(--card-color-1);
+}
+
+.card:nth-child(4n + 2){
+  background-color: var(--card-color-2);
+}
+
+.card:nth-child(4n + 3){
+  background-color: var(--card-color-3);
+}
+
+.card:nth-child(4n + 4){
+  background-color: var(--card-color-4);
+}
+
+@media screen and (max-width: 600px) {
+  .card{
+    grid-column: span 6;
+  }
+}
+
+.note{
+  width: 100%;
+  height: 100%;
+  align-self: flex-start;
+}
+
+.icon_box{
+  width: 42px;
+  height: 42px;
+  background: #474747;
+  font-size: 2rem;
+  display:grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon_box:nth-child(2){
+  border-radius: 5px;
+  width: fit-content;
+  padding: 0 15px;
+  font-size: 20px;
+  color: #474747;
+  font-weight: 600;
+  background-color: var(--card-color-3);
+}
+
+.icon_box:nth-child(3){
+  color: red;
+  border-radius: 5px;
+}
+
+.note_wrapper{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.note_wrapper > p{
+  font-size: .75rem;
+  color: rgba(225, 225, 225, 0.5);
+  margin-bottom: 10px;
+}
+
+.note_wrapper > input, .note_wrapper > textarea{
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: aliceblue;
+  font-size: 1.4rem;
+}
+
+.note_wrapper > textarea {
+  font-size: 1.1rem;
+  resize: none;
+}
+
+.note_wrapper > textarea::-webkit-scrollbar {
+  width: 0;
+}
